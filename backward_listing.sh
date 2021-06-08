@@ -1,11 +1,10 @@
 #!/bin/bash
-
-text="Blood for the Blood God"
+IFS=$''
+text=$(tac $0)
 len=${#text}
-echo $len
 for((i = $len-1; i >= 0 ; --i))
 do
-rev="$rev${text:$i:1}"
+    rev="$rev${text:$i:1}"
 done
 
 echo $rev
